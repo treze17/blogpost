@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs')%>
+  <body>
+    <%- include('../partials/nav.ejs')%>
+
+    <div class="blogs content">
+      <h2>All Blogs</h2>
+
+      <div class="blog-post">
+        <% blogs.forEach((blog)=> {%>
+        <a class="single" href="/blogs/<%= blog._id %>">
+          <h2 class="names"><%= blog.title %></h2>
+
+          <p class="cities"><%= blog.body %></p>
+        </a>
+        <% })%>
+      </div>
+    </div>
+  </body>
+  <%- include('../partials/footer.ejs')%>
+</html>

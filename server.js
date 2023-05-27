@@ -3,7 +3,7 @@ const fs = require("fs");
 const _ = require("lodash");
 
 const port = 300;
-server = http.createServer((req, res) => {
+const server = http.createServer((req, res) => {
   // lodashconst
   const num = _.random(10, 20);
   console.log(num);
