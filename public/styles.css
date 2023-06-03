@@ -8,9 +8,14 @@
     .blog-post a{
       display: block;
       border-left: 5px solid rebeccapurple;
-      margin: 40px 0;
+      
       padding-left: 30px;
+      
     }
+   .blog-post a:hover{
+      box-shadow:0 0 5px rgba(0,0,0,0.9);
+      transition: all 0.3s ease-in-out;
+   }
     .blog-post a:hover h2{
       color: crimson;
     }
@@ -64,8 +69,9 @@
       margin-left: 20px;
     }
     .create-blog {
-      max-width: 400px;
 
+      max-width: 400px;
+      border: 2px solid #222;
       margin: 20px auto;
     }
     .create-blog input {
@@ -98,7 +104,11 @@
       justify-content: space-between;
       border-bottom: 2px solid #222;
       align-items: center;
+      transition:all 5s;
+      height: 200px;
+      width: 100%;
     }
+  
     nav ul {
       display: flex;
       justify-content: space-between;
@@ -123,5 +133,87 @@
       text-align: center;
       margin-top: 70px;
       color: #777;
+    }
+    nav .open,.menus i{
+      display: none;
+    }
+    @media screen and (max-width:600px){
+      .menus {
+        display: fixed;
+        top: 0;
+        right: -100%;
+        position: absolute;
+        background-color: rgba(25, 25, 25,0.9);
+        height: 100vh;
+        color: antiquewhite;
+        padding-top: 20px;
+        width: 200px;
+        text-align: center;
+        z-index: 100;
+        transition: all 1.5s ease;
+       
+       
+      }
+     nav.active .menus{
+      right: -0%;
+     }
+      nav .menus ul{
+      
+        
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin: 5px;
+        align-items: center;
+        justify-content: center;
+      }
+     .menus ul li{
+      padding: 10px;
+      width: 100%;
+      
+     }
+     
+      .menus ul li:hover{
+        background-color: antiquewhite;
+        color: #222;
+        width: 100%;
+      }
+      .menus i{
+        
+        
+        display: block;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        font-size: 2.5em;
+        cursor: pointer;
+        
+      }
+      .menus i:hover{
+        background-color: antiquewhite;
+        color: #222;
+      }
+      nav .open{
+        cursor: pointer;
+        display: block;
+        font-size: 2.5em;
+        color: #222;
+        
+      }
+      /* nav a[class='menu']{
+        visibility: hidden;
+      } */
+      .site-title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+      }
+  
+    
+    
+    
+
+    
     }
   

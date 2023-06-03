@@ -1,10 +1,41 @@
-<nav>
-  <div class="site-title">
-    <a href="/"><h1>Tech Global</h1></a>
-  </div>
-  <ul>
-    <li><a href="/">Blogs</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/blogs/create">New Blogs</a></li>
-  </ul>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <nav>
+      <div class="site-title">
+        <a href="/"><h1>Tech Global</h1></a>
+      </div>
+      <i class="bx bx-menu open"></i>
+      <div class="menus">
+        <i class="bx bx-x close"></i>
+
+        <ul>
+          <li><a href="/">Blogs</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/blogs/create">New Blogs</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <script>
+      const openIcon = document.querySelector(".open");
+      const nav = document.querySelector("nav");
+      const closeMenu = document.querySelector(".close");
+
+      //js to open menu
+      openIcon.addEventListener("click", () => {
+        nav.classList.add("active");
+      });
+
+      closeMenu.addEventListener("click", () => {
+        nav.classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
