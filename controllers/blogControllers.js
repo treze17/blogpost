@@ -4,7 +4,7 @@ const controller_func_index = (req, res) => {
   Blog.find()
     .sort({ createdAt: -1 })
     .then((result) => {
-      res.render("blogs/index", { title: "All blogs", blogs: result });
+      res.render("blogs/index", { title: "All blogs", newBlog: result });
     })
     .catch((err) => {
       console.log(err);
@@ -16,7 +16,7 @@ const controller_func_details = (req, res) => {
   const uid = req.params.id;
   Blog.findById(uid)
     .then((result) => {
-      res.render("blogs/details", { blogs: result, title: "Rapper Details" });
+      res.render("blogs/details", { newBlog: result, title: "Rapper Details" });
     })
     .catch((err) => {
       res.status(404).render("404", { title: "Blog not found" });

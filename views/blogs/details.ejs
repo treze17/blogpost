@@ -5,11 +5,11 @@
     <%- include('../partials/nav.ejs')%>
 
     <div class="details content">
-      <h2><%= blogs.title %></h2>
+      <h2><%= newBlog.title %></h2>
       <div class="content">
-        <p><%= blogs.body %></p>
+        <p><%= newBlog.body %></p>
       </div>
-      <a class="delete" data-doc="<%= blogs._id %>">
+      <a class="delete" data-doc="<%= newBlog._id %>">
         <img src="/del.svg" alt="delete icon" />
       </a>
     </div>
